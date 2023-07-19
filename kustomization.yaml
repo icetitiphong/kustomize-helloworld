@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 - deployment.yaml
 - service.yaml
-namespace: ice
+namespace: ice-training
 images:
 - name: asia.gcr.io/poc-innovation-iot/helloworld-ice
   newTag: dc5d42c5
