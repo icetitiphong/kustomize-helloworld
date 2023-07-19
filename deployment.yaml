@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: helloworld
-          image: asia.gcr.io/poc-innovation-iot/helloworld
+          image: asia.gcr.io/poc-innovation-iot/helloworld-ice
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
