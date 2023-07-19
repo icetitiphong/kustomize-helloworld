@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld
+  name: helloworld-duke
   labels:
-    app.kubernetes.io/name: helloworld
-    app.kubernetes.io/instance: helloworld
+    app.kubernetes.io/name: helloworld-duke
+    app.kubernetes.io/instance: helloworld-duke
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: helloworld
-      app.kubernetes.io/instance: helloworld
+      app.kubernetes.io/name: helloworld-duke
+      app.kubernetes.io/instance: helloworld-duke
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: helloworld
-        app.kubernetes.io/instance: helloworld
+        app.kubernetes.io/name: helloworld-duke
+        app.kubernetes.io/instance: helloworld-duke
     spec:
       containers:
-        - name: helloworld
-          image: asia.gcr.io/poc-innovation-iot/helloworld
+        - name: helloworld-duke
+          image: asia.gcr.io/poc-innovation-iot/helloworld-duke
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -39,8 +39,8 @@ spec:
             initialDelaySeconds: 10
           resources: 
             limits: 
-              cpu: 500m
-              memory: 128Mi
+              cpu: 64m
+              memory: 32Mi
             requests: 
-              cpu: 250m
+              cpu: 32m
               memory: 6
